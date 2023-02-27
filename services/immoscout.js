@@ -1,4 +1,4 @@
-const OAuth = require('OAuth');
+const OAuth = require('oauth');
 const apiToken = process.env.IMMOSCOUT_API_KEY;
 const apiSecret = process.env.IMMOSCOUT_API_SECRET;
 const accessToken = process.env.IMMOSCOUT_ACCESS_TOKEN;
