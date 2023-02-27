@@ -35,7 +35,7 @@ export default function Pension() {
               möchten nun eine sichere und verlässliche monatliche Rente
               bekommen. Weil Sie die Vermietung, Verwaltung und dauernde
               Instandhaltung ihrer Immobilie belastet, möchten Sie diese
-              Aufgaben gerne an jemanden Zuverlässigen abgeben. Sie möchten sich
+              Aufgaben gerne an jemand Zuverlässigen abgeben. Sie möchten sich
               Zeit für die schönen Dinge im Leben nehmen und hierfür die
               finanzielle Freiheit haben. Sie scheuen aber den Verkauf Ihrer
               Immobilien, da Sie nicht wissen, wie sie den einmaligen Erlös

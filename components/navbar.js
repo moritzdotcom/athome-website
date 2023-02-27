@@ -3,6 +3,10 @@ import { useRouter } from 'next/router';
 import { Disclosure, Transition } from '@headlessui/react';
 import { HiBars3, HiXMark } from 'react-icons/hi2';
 import Link from 'next/link';
+import Image from 'next/image';
+
+import logo from '/public/logos/AtHome.png';
+import logoDark from '/public/logos/AtHomeDark.png';
 
 const navItems = [
   { name: 'Wohnungssuche', href: '/flats' },
@@ -49,16 +53,20 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-center">
                   <Link href="/">
                     <a>
-                      <img
-                        className="hidden h-8 w-auto dark:block"
-                        src="/logos/AtHome.png"
-                        alt="Your Company"
-                      />
-                      <img
-                        className="block h-8 w-auto dark:hidden"
-                        src="/logos/AtHomeDark.png"
-                        alt="Your Company"
-                      />
+                      <div className="hidden dark:block w-[120px]">
+                        <Image
+                          src={logo}
+                          layout="responsive"
+                          alt="Your Company"
+                        />
+                      </div>
+                      <div className="block dark:hidden w-[120px]">
+                        <Image
+                          src={logoDark}
+                          layout="responsive"
+                          alt="Your Company"
+                        />
+                      </div>
                     </a>
                   </Link>
                 </div>

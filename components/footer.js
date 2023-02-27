@@ -1,20 +1,21 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { MdLocalPhone, MdLocationCity, MdMail } from 'react-icons/md';
+
+import logo from '/public/logos/AtHome.png';
+import logoDark from '/public/logos/AtHomeDark.png';
+
 export default function Footer() {
   return (
     <footer className="py-5 px-5 mt-10 bg-gray-200 dark:bg-gray-900 dark:text-gray-200 text-sm">
       <div className="flex flex-col md:flex-row items-start justify-between gap-5 mb-5">
         <div className="flex flex-col w-full md:w-auto items-center md:items-start gap-3">
-          <img
-            className="hidden h-12 dark:block"
-            src="/logos/AtHome.png"
-            alt="Your Company"
-          />
-          <img
-            className="block h-12 dark:hidden"
-            src="/logos/AtHomeDark.png"
-            alt="Your Company"
-          />
+          <div className="hidden dark:block max-w-[180px] w-full">
+            <Image src={logo} layout="responsive" alt="Your Company" />
+          </div>
+          <div className="block dark:hidden max-w-[180px] w-full">
+            <Image src={logoDark} layout="responsive" alt="Your Company" />
+          </div>
           <div className="flex gap-2 text-red-800">
             <Link href="/imprint">
               <a>Impressum</a>

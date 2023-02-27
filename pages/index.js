@@ -1,8 +1,12 @@
 import { Transition } from '@headlessui/react';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
 import AnimateBounce from '../components/animateBounce';
+
+import koppelskamp from '/public/images/Koppelskamp7.jpeg';
+import immoShowcase from '/public/images/bestandGrid.jpeg';
 
 export default function Home() {
   const [image, setImage] = useState(1);
@@ -106,10 +110,12 @@ export default function Home() {
             Wohnungssuchenden und Mietern stets als kompetenter Ansprechpartner
             zur Verfügung.
           </p>
-          <AnimateBounce className="w-full h-36">
-            <img
-              src="/images/Koppelskamp7.jpeg"
-              className="object-cover w-full h-full"
+          <AnimateBounce className="w-full h-36 relative">
+            <Image
+              src={koppelskamp}
+              alt="Koppelskamp Image"
+              className="object-cover"
+              layout="fill"
             />
           </AnimateBounce>
         </article>
@@ -166,8 +172,13 @@ export default function Home() {
           </p>
         </article>
       </section>
-      <div className="w-full mt-5 px-5 mx-auto max-w-4xl">
-        <img className="w-full" src="/images/bestandGrid.jpeg" />
+      <div className="w-full mt-5 px-5 mx-auto max-w-4xl relative">
+        <Image
+          src={immoShowcase}
+          alt="Koppelskamp Image"
+          className="object-cover"
+          layout="responsive"
+        />
       </div>
     </>
   );
