@@ -75,7 +75,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>AtHome - Contact</title>
+        <title>AtHome - Kontakt</title>
       </Head>
       <main className="mt-5 max-w-5xl mx-auto px-5">
         <h3 className="text-red-800 mt-10 text-2xl lg:text-3xl font-bold pb-3">

@@ -9,7 +9,7 @@ const navItems = [
   { name: 'Immobilienverwaltung', href: '/propertyManagement' },
   { name: 'Immobilienrente', href: '/pension' },
   { name: 'Team', href: '/team' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Kontakt', href: '/contact' },
 ];
 
 export default function Navbar() {
