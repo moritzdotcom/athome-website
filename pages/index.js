@@ -108,7 +108,7 @@ export default function Home() {
           </p>
           <AnimateBounce className="w-full h-36">
             <img
-              src="/images/KoppelsKamp7.jpeg"
+              src="/images/Koppelskamp7.jpeg"
               className="object-cover w-full h-full"
             />
           </AnimateBounce>
