@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import GoogleMap from '../../components/googleMap';
 import { getAttachments, getFlat } from '../../services/immoscout';
 
@@ -37,6 +38,17 @@ function RenderText({ identifier, text }) {
   );
 }
 
+function AttachedImage({ url }) {
+  return (
+    <div className="h-60">
+      <img
+        src={url}
+        className="w-auto h-full max-w-none rounded-md shadow-md"
+      />
+    </div>
+  );
+}
+
 export default function Flat({ id, flatData, attachments, error }) {
   if (error) {
     switch (error.statusCode) {
@@ -50,9 +62,9 @@ export default function Flat({ id, flatData, attachments, error }) {
             }
           />
         );
-        break;
     }
   }
+  console.log(attachments);
   return (
     <>
       <header className="mx-auto max-w-4xl">
@@ -110,24 +122,15 @@ export default function Flat({ id, flatData, attachments, error }) {
         </h3>
         <RenderText identifier="other" text={flatData.otherNote} />
       </main>
-      <div className="px-5 flex gap-3 overflow-x-scroll mt-5">
+      <div className="px-5 py-2 flex gap-3 overflow-x-scroll mt-5">
         {attachments
-          .filter((att) => !att.titlePicture)
+          .filter((att) => !att.titlePicture && att.type == 'common:Picture')
           .map((attachment) => {
             return (
-              <div key={`flat-attachment-${attachment.id}`} className="h-60">
-                {attachment.type == 'common:Picture' ? (
-                  <img
-                    src={attachment.imageUrl}
-                    className="w-auto h-full max-w-none rounded-md shadow-md"
-                  />
-                ) : (
-                  <iframe
-                    src={attachment.imageUrl}
-                    className="w-auto h-full max-w-none rounded-md shadow-md"
-                  />
-                )}
-              </div>
+              <AttachedImage
+                url={attachment.imageUrl}
+                key={`flat-attachment-${attachment.id}`}
+              />
             );
           })}
       </div>

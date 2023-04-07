@@ -33,7 +33,6 @@ export default function Home() {
               fill="currentColor"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
-              ariaHidden="true"
             >
               <polygon points="50,0 100,0 50,100 0,100" />
             </svg>

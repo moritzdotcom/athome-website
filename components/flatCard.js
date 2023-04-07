@@ -6,7 +6,6 @@ export default function FlatCard({ loading, flat }) {
           <svg
             className="w-12 h-12 text-gray-200"
             xmlns="http://www.w3.org/2000/svg"
-            ariaHidden="true"
             fill="currentColor"
             viewBox="0 0 640 512"
           >

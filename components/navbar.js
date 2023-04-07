@@ -43,9 +43,9 @@ export default function Navbar() {
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <HiXMark className="block h-6 w-6" ariaHidden="true" />
+                    <HiXMark className="block h-6 w-6" />
                   ) : (
-                    <HiBars3 className="block h-6 w-6" ariaHidden="true" />
+                    <HiBars3 className="block h-6 w-6" />
                   )}
                 </Disclosure.Button>
               </div>
