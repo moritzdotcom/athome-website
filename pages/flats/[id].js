@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import GoogleMap from '../../components/googleMap';
 import { getAttachments, getFlat } from '../../services/immoscout';
 
@@ -64,7 +63,6 @@ export default function Flat({ id, flatData, attachments, error }) {
         );
     }
   }
-  console.log(attachments);
   return (
     <>
       <header className="mx-auto max-w-4xl">
@@ -140,6 +138,10 @@ export default function Flat({ id, flatData, attachments, error }) {
 
 export async function getServerSideProps(context) {
   const id = context.query.id;
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=600, stale-while-revalidate=1200'
+  );
 
   try {
     return {
