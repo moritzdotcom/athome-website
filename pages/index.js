@@ -1,25 +1,13 @@
-import { Transition } from '@headlessui/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Fragment, useEffect, useState } from 'react';
 import AnimateBounce from '../components/animateBounce';
 
 import koppelskamp from '/public/images/Koppelskamp7.jpeg';
 import immoShowcase from '/public/images/bestandGrid.jpeg';
+import ImageSlider from '../components/imageSlider';
 
 export default function Home() {
-  const [image, setImage] = useState(1);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImage((img) => (img == 5 ? 1 : img + 1));
-    }, 5000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   return (
     <>
       <Head>
@@ -64,31 +52,7 @@ export default function Home() {
             </main>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:absolute lg:inset-y-0 lg:right-0 h-56 sm:h-72 md:h-96 overflow-hidden">
-          {Array(5)
-            .fill(0)
-            .map((_, index) => {
-              return (
-                <Transition
-                  as={Fragment}
-                  show={image == index + 1}
-                  key={`image-${index}`}
-                  enter="transition ease-linear duration-1000"
-                  enterFrom="opacity-0 scale-100"
-                  enterTo="opacity-100 scale-105"
-                  leave="transition-opacity ease-linear duration-0"
-                  leaveFrom="hidden"
-                  leaveTo="hidden"
-                >
-                  <img
-                    className="object-cover w-full h-auto lg:h-full"
-                    src={`/slider/${index + 1}.jpeg`}
-                    alt=""
-                  />
-                </Transition>
-              );
-            })}
-        </div>
+        <ImageSlider />
       </div>
       <section className="flex flex-col lg:flex-row gap-10 mt-5 px-5 mx-auto max-w-4xl">
         <article className="w-full lg:w-3/5 flex flex-col gap-3 justify-between">
