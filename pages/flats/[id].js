@@ -14,11 +14,11 @@ function RenderText({ identifier, text }) {
     text && (
       <>
         {text.split('\n').map((paragraph, i) => {
-          const bulletPoint = paragraph.match(/^\s*-(.*)$/);
+          const bulletPoint = paragraph.match(/^\s*(-|\*|•)(.*)$/);
           if (bulletPoint) {
             return (
               <ul key={`paragraph-${identifier}-${i}`} className="list-disc">
-                <li className="ml-3">{bulletPoint[1]}</li>
+                <li className="ml-3">{bulletPoint[2]}</li>
               </ul>
             );
           } else {
