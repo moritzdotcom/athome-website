@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { MdLocalPhone, MdMail } from 'react-icons/md';
 import Divider from '../components/divider';
-import GoogleMap from '../components/googleMap';
 
 export default function Contact() {
   const [loading, setLoading] = useState('');
@@ -195,7 +194,14 @@ export default function Contact() {
         </h3>
         <Divider />
         <div className="w-full h-72">
-          <GoogleMap marker={{ lat: 51.29619, lng: 6.73637 }} />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.8150023552785!2d6.73388937675876!3d51.29612842611527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8b7bec1514655%3A0x21da9833b1c5e817!2sAthome%20Hausverwaltung%20GmbH!5e0!3m2!1sde!2sde!4v1686317740604!5m2!1sde!2sde"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </main>
     </>
