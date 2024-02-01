@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Divider from '../components/divider';
 import MemberCard from '../components/memberCard';
 
@@ -33,7 +32,7 @@ const team = [
     academia: 'Bankkauffrau',
     job: 'Hausverwaltung',
     phone: '0211 - 522884 - 21',
-    mail: 'c.schlenke@loechner-immo.de',
+    mail: 'christiane.schlenke@athome-immo.de',
     imageUrl: '/people/c-schlenke.jpeg',
   },
   {
