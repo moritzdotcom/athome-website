@@ -20,12 +20,12 @@ const team = [
     imageUrl: '/people/h-scheulen.jpeg',
   },
   {
-    name: 'Karen Walker',
+    name: 'Vanessa Pastars',
     academia: 'Immobilienkauffrau',
     job: 'Hausverwaltung',
     phone: '0211 - 522884 - 22',
-    mail: 'k.wensing@loechner-immo.de',
-    imageUrl: '/people/k-walker.jpeg',
+    mail: 'v.pastars@athome-immo.de',
+    imageUrl: '/people/v-pastars.jpg',
   },
   {
     name: 'Christiane Schlenke',
