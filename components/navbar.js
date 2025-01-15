@@ -10,9 +10,9 @@ import logoDark from '/public/logos/AtHomeDark.png';
 
 const navItems = [
   { name: 'Wohnungssuche', href: '/flats' },
+  { name: 'Möbliertes Wohnen', href: '/furnished' },
   { name: 'Immobilienverwaltung', href: '/propertyManagement' },
   { name: 'Immobilienrente', href: '/pension' },
-  { name: 'Möbliertes Wohnen', href: '/furnished' },
   { name: 'Team', href: '/team' },
   { name: 'Kontakt', href: '/contact' },
 ];
