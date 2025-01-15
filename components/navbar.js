@@ -12,6 +12,7 @@ const navItems = [
   { name: 'Wohnungssuche', href: '/flats' },
   { name: 'Immobilienverwaltung', href: '/propertyManagement' },
   { name: 'Immobilienrente', href: '/pension' },
+  { name: 'Möbliertes Wohnen', href: '/furnished' },
   { name: 'Team', href: '/team' },
   { name: 'Kontakt', href: '/contact' },
 ];
