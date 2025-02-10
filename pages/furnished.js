@@ -1,5 +1,25 @@
 import Head from 'next/head';
 import Divider from '../components/divider';
+import AnimateBounce from '../components/animateBounce';
+
+function FlatCard({ imageFileName, location, description }) {
+  return (
+    <div className="flex flex-col md:flex-row gap-2 md:gap-8">
+      <AnimateBounce className="w-full">
+        <img
+          src={`/images/furnished/${imageFileName}`}
+          className="object-cover w-full mx-auto rounded-md shadow-md"
+        />
+      </AnimateBounce>
+      <div className="w-full">
+        <h3 className="font-semibold text-lg md:text-xl mb-1 text-red-800">
+          {location}
+        </h3>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
 
 export default function Pension() {
   return (
@@ -89,18 +109,41 @@ export default function Pension() {
           </div>
         </article>
       </section>
-      {/* <section className="mt-5 px-5 mx-auto max-w-4xl">
+      <section className="mt-5 px-5 mx-auto max-w-4xl">
         <article className="w-full">
           <h3 className="text-red-800 text-xl lg:text-2xl font-bold pb-3">
             Entdecken Sie unsere Wohnungen
           </h3>
           <Divider />
-          <div className="flex flex-col gap-3 mt-3">
-            Hier kommen Wohnungsbilder mit Straße (Keine Hausnr.) und Stadtteil
-            in Klammern
+          <div className="flex flex-col gap-8 mt-8">
+            <FlatCard
+              imageFileName="grafenbergerAllee.jpg"
+              location="Grafenberger Allee (Flingern)"
+              description="Geräumiges Loft mit 73m², hochwertiger Einrichtung und einer großen Dachterrasse - perfekt für stilvolles Wohnen mit viel Platz."
+            />
+            <FlatCard
+              imageFileName="mendelssohnstr.jpg"
+              location="Mendelssohnstraße (Flingern Nord)"
+              description="Modern eingerichtetes 3-Zimmer-Apartment (60m²) mit separatem Kinder-/Gästezimmer und Balkon - ideal für Familien oder Home-Office."
+            />
+            <FlatCard
+              imageFileName="schuetzenstrLinks.jpg"
+              location="Schützenstraße (Stadtmitte)"
+              description="Mittelgroße 2-Zimmer-Wohnung (51m²) im Herzen Düsseldorfs mit Balkon und optionalem Stellplatz - zentral und komfortabel."
+            />
+            <FlatCard
+              imageFileName="schuetzenstrMitte.jpg"
+              location="Schützenstraße (Stadtmitte)"
+              description="Perfekt für Singles: Kleine, gut geschnittene 36m²-Wohnung mit großem Balkon in Top-Lage der Stadt."
+            />
+            <FlatCard
+              imageFileName="stockkampstr.jpg"
+              location="Stockkampstraße (Pempelfort)"
+              description="Charmante Erdgeschosswohnung (42m²) mit großer Terrasse und Garten - eine grüne Oase mitten in Pempelfort."
+            />
           </div>
         </article>
-      </section> */}
+      </section>
     </>
   );
 }
