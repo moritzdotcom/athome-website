@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MdLocalPhone, MdMail } from 'react-icons/md';
 import Divider from '../components/divider';
+import { useRouter } from 'next/router';
 
 export default function Contact() {
   const [loading, setLoading] = useState('');
@@ -11,6 +12,7 @@ export default function Contact() {
   const [errors, setErrors] = useState({});
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
+  const router = useRouter();
 
   const handleValidation = () => {
     let tempErrors = {};
@@ -70,6 +72,13 @@ export default function Contact() {
     }
     setLoading(false);
   };
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    if (router.query?.message) {
+      setMessage(router.query.message);
+    }
+  }, [router.isReady, router.query]);
 
   return (
     <>

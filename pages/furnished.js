@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Divider from '../components/divider';
 import AnimateBounce from '../components/animateBounce';
+import Link from 'next/link';
 
-function FlatCard({ imageFileName, location, description }) {
+function FlatCard({ imageFileName, location, description, message }) {
   return (
     <div className="flex flex-col md:flex-row gap-2 md:gap-8">
       <AnimateBounce className="w-full">
@@ -16,6 +17,11 @@ function FlatCard({ imageFileName, location, description }) {
           {location}
         </h3>
         <p>{description}</p>
+        <Link href={{ pathname: '/contact', query: { message } }}>
+          <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-gray-800 hover:bg-red-800 dark:bg-gray-700 px-4 py-1 text-base font-medium text-white transition-colors md:py-2 md:px-6 md:text-lg mt-3 md:mt-6">
+            Wohnung anfragen
+          </a>
+        </Link>
       </div>
     </div>
   );
@@ -86,13 +92,11 @@ export default function Pension() {
               oder einen gemütlichen Kaffee genießen? Kein Problem - an alles
               ist gedacht!
             </p>
-            <p className="font-bold text-red-800">
-              Unser Motto: Einziehen und wohl fühlen
-            </p>
+            <p className="font-bold text-red-800">Einziehen und wohl fühlen</p>
             <p>
-              Unser Ziel ist es, dass Sie sich ab dem ersten Moment zuhause
-              fühlen. Kein Schleppen von Möbeln, kein Stress mit Handwerkern -
-              einfach ankommen und genießen.
+              Sie fühlen sich vom ersten Moment an wie zuhause. Kein Schleppen
+              von Möbeln, kein Stress mit Handwerkern - einfach ankommen und
+              genießen.
             </p>
             <p className="font-bold text-red-800">
               Ihr neues Zuhause wartet auf Sie!
@@ -112,34 +116,49 @@ export default function Pension() {
       <section className="mt-5 px-5 mx-auto max-w-4xl">
         <article className="w-full">
           <h3 className="text-red-800 text-xl lg:text-2xl font-bold pb-3">
-            Entdecken Sie unsere Wohnungen
+            Entdecken Sie Ihre Traumwohnung
           </h3>
           <Divider />
           <div className="flex flex-col gap-8 mt-8">
             <FlatCard
               imageFileName="grafenbergerAllee.jpg"
-              location="Grafenberger Allee (Flingern)"
+              location="Grafenberger Allee (Flingern Nord)"
               description="Geräumiges Loft mit 73m², hochwertiger Einrichtung und einer großen Dachterrasse - perfekt für stilvolles Wohnen mit viel Platz."
+              message={
+                'Sehr geehrte Damen und Herren,\nIch interessiere mich für die möblierte Wohnung in der Grafenberger Allee. Bitte nehmen Sie Kontakt mit mir auf.'
+              }
             />
             <FlatCard
               imageFileName="mendelssohnstr.jpg"
               location="Mendelssohnstraße (Flingern Nord)"
               description="Modern eingerichtetes 3-Zimmer-Apartment (60m²) mit separatem Kinder-/Gästezimmer und Balkon - ideal für Familien oder Home-Office."
+              message={
+                'Sehr geehrte Damen und Herren,\nIch interessiere mich für die möblierte Wohnung in der Mendelssohnstraße. Bitte nehmen Sie Kontakt mit mir auf.'
+              }
             />
             <FlatCard
               imageFileName="schuetzenstrLinks.jpg"
               location="Schützenstraße (Stadtmitte)"
               description="Mittelgroße 2-Zimmer-Wohnung (51m²) im Herzen Düsseldorfs mit Balkon und optionalem Stellplatz - zentral und komfortabel."
+              message={
+                'Sehr geehrte Damen und Herren,\nIch interessiere mich für die möblierte Wohnung in der Schützenstraße 2.OG links. Bitte nehmen Sie Kontakt mit mir auf.'
+              }
             />
             <FlatCard
               imageFileName="schuetzenstrMitte.jpg"
               location="Schützenstraße (Stadtmitte)"
               description="Perfekt für Singles: Kleine, gut geschnittene 36m²-Wohnung mit großem Balkon in Top-Lage der Stadt."
+              message={
+                'Sehr geehrte Damen und Herren,\nIch interessiere mich für die möblierte Wohnung in der Schützenstraße 2.OG mitte. Bitte nehmen Sie Kontakt mit mir auf.'
+              }
             />
             <FlatCard
               imageFileName="stockkampstr.jpg"
               location="Stockkampstraße (Pempelfort)"
               description="Charmante Erdgeschosswohnung (42m²) mit großer Terrasse und Garten - eine grüne Oase mitten in Pempelfort."
+              message={
+                'Sehr geehrte Damen und Herren,\nIch interessiere mich für die möblierte Wohnung in der Stockkampstraße. Bitte nehmen Sie Kontakt mit mir auf.'
+              }
             />
           </div>
         </article>
