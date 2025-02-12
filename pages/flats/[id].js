@@ -37,11 +37,12 @@ function RenderText({ identifier, text }) {
   );
 }
 
-function AttachedImage({ url }) {
+function AttachedImage({ url, title }) {
   return (
     <div className="h-60">
       <img
         src={url}
+        alt={title}
         className="w-auto h-full max-w-none rounded-md shadow-md"
       />
     </div>
@@ -68,6 +69,7 @@ export default function Flat({ id, flatData, attachments, error }) {
       <header className="mx-auto max-w-4xl">
         <div className="flex flex-col sm:flex-row sm:m-5 sm:shadow-xl sm:rounded-xl sm:overflow-hidden">
           <img
+            alt={flatData.address}
             src={attachments.filter((att) => att.titlePicture)[0].imageUrl}
             className="w-full sm:w-2/5 max-h-[50vh] object-cover"
           />
@@ -82,7 +84,7 @@ export default function Flat({ id, flatData, attachments, error }) {
               href={`https://www.immobilienscout24.de/expose/${id}`}
               className="flex items-center gap-2 border py-1 px-2 rounded-md bg-gray-50 dark:text-gray-800 self-start"
             >
-              <img src="/logos/immoScout.png" width="30" />
+              <img alt="" src="/logos/immoScout.png" width="30" />
               Auf ImmoScout24 ansehen
             </a>
           </div>
@@ -127,6 +129,7 @@ export default function Flat({ id, flatData, attachments, error }) {
             return (
               <AttachedImage
                 url={attachment.imageUrl}
+                title={attachment.title || ''}
                 key={`flat-attachment-${attachment.id}`}
               />
             );
