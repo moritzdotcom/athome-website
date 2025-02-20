@@ -9,7 +9,7 @@ const team = [
     job: 'Geschäftsführung',
     phone: '0211 - 522884 - 0',
     mail: 'r.loechner@loechner-capital.de',
-    imageUrl: '/people/r-loechner.jpeg',
+    imageUrl: '/people/r-loechner.JPG',
   },
   {
     name: 'Hermann Scheulen',
@@ -20,12 +20,36 @@ const team = [
     imageUrl: '/people/h-scheulen.jpeg',
   },
   {
+    name: 'Niklas Sander',
+    academia: 'Industrie Meister',
+    job: 'Technische Leitung, Bauleitung',
+    phone: '0211 - 522884 - 13',
+    mail: 'n.sander@loechner-immo.de',
+    imageUrl: '/people/n-sander.JPG',
+  },
+  {
     name: 'Moritz Löchner',
-    academia: 'Bachelor in Management',
+    academia: 'BSc International Management',
     job: 'Projektleitung',
     phone: '0211 - 522884 - 13',
     mail: 'moritz.loechner@loechner-capital.de',
     imageUrl: '/people/m-loechner.JPG',
+  },
+  {
+    name: 'Julia Tenten',
+    academia: 'MA Wirtschaft',
+    job: 'Assistenz der GF',
+    phone: '0211 - 522884 - 10',
+    mail: 'j.tenten@loechner-immo.de',
+    imageUrl: '/people/j-tenten.JPG',
+  },
+  {
+    name: 'Andrea Scheper',
+    academia: 'Bilanzbuchhalterin',
+    job: 'Finanzen und Controlling',
+    phone: '0211 - 522884 - 12',
+    mail: 'a.scheper@loechner-immo.de',
+    imageUrl: '/people/a-scheper.JPG',
   },
   {
     name: 'Christiane Schlenke',
@@ -33,7 +57,7 @@ const team = [
     job: 'Hausverwaltung',
     phone: '0211 - 522884 - 21',
     mail: 'christiane.schlenke@athome-immo.de',
-    imageUrl: '/people/c-schlenke.jpeg',
+    imageUrl: '/people/c-schlenke.JPG',
   },
   {
     name: 'Karen Walker',
@@ -49,15 +73,7 @@ const team = [
     job: 'Hausverwaltung',
     phone: '0211 - 522884 - 22',
     mail: 'n.kluge@loechner-immo.de',
-    imageUrl: '/people/n-kluge.jpg',
-  },
-  {
-    name: 'Andrea Scheper',
-    academia: 'Bilanzbuchhalterin',
-    job: 'Finanzen und Controlling',
-    phone: '0211 - 522884 - 12',
-    mail: 'a.scheper@loechner-immo.de',
-    imageUrl: '/people/a-scheper.jpeg',
+    imageUrl: '/people/n-kluge.JPG',
   },
   {
     name: 'Andreas Stachon',
@@ -65,7 +81,7 @@ const team = [
     job: 'Elektriker',
     phone: '0151 - 151551 - 04',
     mail: 'andreas.stachon66@arcor.de',
-    imageUrl: '/people/a-stachon.jpg',
+    imageUrl: '/people/a-stachon.JPG',
   },
   {
     name: 'Stephan Schnitzler',
@@ -73,7 +89,7 @@ const team = [
     job: 'Hausmeister',
     phone: '0151 - 151551 - 05',
     mail: 'hausmeister.schnitzler@gmail.com',
-    imageUrl: '/people/s-schnitzler.jpeg',
+    imageUrl: '/people/s-schnitzler.JPG',
   },
   {
     name: 'Tim Hentschel',
@@ -81,7 +97,7 @@ const team = [
     job: 'Hausmeister',
     phone: '0151 - 151551 - 09',
     mail: 'timhentschel38@gmail.com',
-    imageUrl: '/people/t-hentschel.jpeg',
+    imageUrl: '/people/t-hentschel.JPG',
   },
 ];
 
@@ -92,8 +108,8 @@ export default function Team() {
         <title>AtHome - Team</title>
       </Head>
       <img
-        src="/people/team.jpg"
-        className="w-full max-h-[30vh] md:max-h-[50vh] min-h-[250px] object-cover"
+        src="/people/team.JPG"
+        className="w-full max-h-[30vh] md:max-h-[70vh] min-h-[250px] object-cover"
       />
       <section className="mt-5 px-5 mx-auto max-w-4xl">
         <h3 className="text-red-800 text-xl lg:text-2xl font-bold pb-3">
