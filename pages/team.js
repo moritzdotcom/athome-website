@@ -99,6 +99,12 @@ const team = [
     mail: 'timhentschel38@gmail.com',
     imageUrl: '/people/t-hentschel.jpg',
   },
+  {
+    name: 'Cristina Petrescu',
+    academia: 'Bürokauffrau',
+    job: 'Facility Management',
+    imageUrl: '/people/c-petrescu.jpg',
+  },
 ];
 
 export default function Team() {

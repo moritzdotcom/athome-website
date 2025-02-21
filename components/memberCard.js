@@ -19,14 +19,22 @@ export default function MemberCard({ member }) {
           {member.academia}
         </h6>
         <h6 className="text-center text-base font-bold">{member.job}</h6>
-        <a href={`tel:${member.phone}`} className="truncate">
-          <MdLocalPhone className="inline text-lg mr-2 text-red-800" />
-          {member.phone}
-        </a>
-        <a href={`mailto:${member.mail}`} className="truncate">
-          <MdMail className="inline text-lg mr-2 text-red-800" />
-          {member.mail}
-        </a>
+        {member.phone ? (
+          <a href={`tel:${member.phone}`} className="truncate">
+            <MdLocalPhone className="inline text-lg mr-2 text-red-800" />
+            {member.phone}
+          </a>
+        ) : (
+          <></>
+        )}
+        {member.mail ? (
+          <a href={`mailto:${member.mail}`} className="truncate">
+            <MdMail className="inline text-lg mr-2 text-red-800" />
+            {member.mail}
+          </a>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
