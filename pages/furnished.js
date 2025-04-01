@@ -160,6 +160,22 @@ export default function Pension() {
                 'Sehr geehrte Damen und Herren,\nIch interessiere mich für die möblierte Wohnung in der Stockkampstraße. Bitte nehmen Sie Kontakt mit mir auf.'
               }
             />
+            <FlatCard
+              imageFileName="koelnerstr.jpg"
+              location="Kölner Straße (Stadtmitte)"
+              description="Geräumige 2-Zimmer-Wohnung (54m²) im Herzen Düsseldorfs in unmittelbarer Nähe zum Hauptbahnhof mit Balkon und optionalem Stellplatz - zentral, komfortabel und optimal angebunden."
+              message={
+                'Sehr geehrte Damen und Herren,\nIch interessiere mich für die möblierte Wohnung in der Kölner Straße. Bitte nehmen Sie Kontakt mit mir auf.'
+              }
+            />
+            <FlatCard
+              imageFileName="duisburgerlandstr.jpg"
+              location="Duisburger Landstraße (Wittlaer)"
+              description="Modernes Loft (41m²) im grünen und ruhigen Stadtteil Wittlaer mit Balkon."
+              message={
+                'Sehr geehrte Damen und Herren,\nIch interessiere mich für die möblierte Wohnung in der Duisburger Landstraße. Bitte nehmen Sie Kontakt mit mir auf.'
+              }
+            />
           </div>
         </article>
       </section>
