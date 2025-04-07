@@ -2,10 +2,15 @@ import sendgrid from '@sendgrid/mail';
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
+function validateReceiver(email) {
+  if (email && ['n.kluge@loechner-immo.de'].includes(email)) return email;
+  return 'info@athome-immo.de';
+}
+
 export default async function sendEmail(req, res) {
   try {
     await sendgrid.send({
-      to: 'info@athome-immo.de',
+      to: validateReceiver(req.body.to),
       from: 'moritz.loechner@gmail.com',
       replyTo: req.body.email,
       subject: `Anliegen von ${req.body.name} über AtHome Kontaktformular`,

@@ -17,7 +17,12 @@ function FlatCard({ imageFileName, location, description, message }) {
           {location}
         </h3>
         <p>{description}</p>
-        <Link href={{ pathname: '/contact', query: { message } }}>
+        <Link
+          href={{
+            pathname: '/contact',
+            query: { message, receiver: 'n.kluge@loechner-immo.de' },
+          }}
+        >
           <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-gray-800 hover:bg-red-800 dark:bg-gray-700 px-4 py-1 text-base font-medium text-white transition-colors md:py-2 md:px-6 md:text-lg mt-3 md:mt-6">
             Wohnung anfragen
           </a>

@@ -9,6 +9,7 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [receiver, setReceiver] = useState('info@athome-immo.de');
   const [errors, setErrors] = useState({});
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
@@ -49,6 +50,7 @@ export default function Contact() {
     if (isValidForm) {
       const res = await fetch('/api/sendMail', {
         body: JSON.stringify({
+          to: receiver,
           email: email,
           name: name,
           message: message,
@@ -77,6 +79,9 @@ export default function Contact() {
     if (!router.isReady) return;
     if (router.query?.message) {
       setMessage(router.query.message);
+    }
+    if (router.query?.receiver) {
+      setReceiver(router.query.receiver);
     }
   }, [router.isReady, router.query]);
 
