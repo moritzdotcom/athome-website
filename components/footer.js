@@ -86,7 +86,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center">
-          Copyright © 2025 Athome Hausverwaltung GmbH. All Rights Reserved
+          Copyright © 2026 Athome Hausverwaltung GmbH. All Rights Reserved
         </div>
         <div className="text-center text-xs mt-3">
           Stock footage provided by
