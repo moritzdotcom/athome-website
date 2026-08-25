@@ -47,7 +47,6 @@ const team = [
     name: 'Andrea Scheper',
     academia: 'Bilanzbuchhalterin',
     job: 'Finanzen und Controlling',
-    phone: '0211 - 522884 - 12',
     mail: 'a.scheper@loechner-immo.de',
     imageUrl: '/people/a-scheper.jpg',
   },
