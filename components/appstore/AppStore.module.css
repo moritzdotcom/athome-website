@@ -364,10 +364,9 @@
   width: 86px;
   height: 86px;
   border-radius: 22px;
-  background: linear-gradient(145deg, #b84b3a, #7f1d1d);
   display: grid;
   place-items: center;
-  color: #fff4e9;
+  color: #8b0f0f;
   box-shadow:
     inset 0 1px 1px #ffffff26,
     0 5px 12px #76391510;
