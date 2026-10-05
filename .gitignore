@@ -35,3 +35,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# binaries
+/public/appstore/**/*.exe
+/public/appstore/**/*.dmg
+/public/downloads/**/*.exe
+/public/downloads/**/*.dmg

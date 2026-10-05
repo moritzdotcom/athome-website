@@ -1,5 +1,5 @@
 import GoogleMap from '../../components/googleMap';
-import { getAttachments, getFlat } from '../../services/immoscout';
+import { getAttachments, getFlat } from '../../lib/immoscout';
 
 function FlatNotFound() {
   return <div>Not Found</div>;
@@ -143,7 +143,7 @@ export async function getServerSideProps(context) {
   const id = context.query.id;
   context.res.setHeader(
     'Cache-Control',
-    'public, s-maxage=600, stale-while-revalidate=1200'
+    'public, s-maxage=600, stale-while-revalidate=1200',
   );
 
   try {

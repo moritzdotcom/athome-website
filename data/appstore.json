@@ -1,0 +1,87 @@
+{
+  "title": "AtHome Appstore",
+  "description": "Unsere Werkzeuge für einen einfacheren Verwaltungsalltag.",
+  "supportUrl": "mailto:info@athome-immo.de",
+  "apps": [
+    {
+      "slug": "kautionsrechner",
+      "name": "Kautionsrechner",
+      "category": "Abrechnung",
+      "version": "1.0.0",
+      "releaseDate": null,
+      "icon": "/appstore/kautionsrechner/icon.png",
+      "shortDescription": "Kaution verzinsen. Abrechnung erstellen. Fertig.",
+      "description": [
+        "Vom hinterlegten Betrag bis zur fertigen Abrechnung: Der Kautionsrechner führt dich durch die Berechnung der Mietkaution und ihrer Zinsen.",
+        "Wähle das Objekt, ergänze die Mieterdaten und den Abrechnungszeitraum. Ein optionaler Kautionseinbehalt wird bei der Auszahlung berücksichtigt. Anschließend kannst du die Abrechnung als PDF speichern oder drucken."
+      ],
+      "features": [
+        {
+          "icon": "calculator",
+          "title": "Einfach berechnen",
+          "description": "Kaution und Zinsen für den gewählten Zeitraum berechnen."
+        },
+        {
+          "icon": "file",
+          "title": "PDF & Druck",
+          "description": "Die fertige Abrechnung speichern oder direkt drucken."
+        },
+        {
+          "icon": "history",
+          "title": "Vorgänge wiederfinden",
+          "description": "Gespeicherte Berechnungen in der lokalen Historie öffnen."
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "/appstore/kautionsrechner/berechnung.webp",
+          "alt": "Kautionsrechner mit Formular und Berechnungsergebnis",
+          "caption": "Berechnung und Auszahlung im Überblick"
+        },
+        {
+          "src": "/appstore/kautionsrechner/historie.webp",
+          "alt": "Historie gespeicherter Kautionsberechnungen",
+          "caption": "Vergangene Vorgänge wiederfinden"
+        },
+        {
+          "src": "/appstore/kautionsrechner/pdf.webp",
+          "alt": "PDF-Abrechnung mit Zinstabelle und Schlussrechnung",
+          "caption": "Die fertige Abrechnung als PDF"
+        }
+      ],
+      "releaseNotes": [
+        "Erste Version für unser Team: Berechnung, Kautionseinbehalt, PDF, Druck und lokale Historie."
+      ],
+      "downloads": {
+        "windows": {
+          "label": "Windows",
+          "url": "https://github.com/moritzdotcom/athome-website/releases/download/kautionsrechner-v1.0.0/Kautionsrechner-1.0.0-Setup.exe",
+          "fileName": "Kautionsrechner-1.0.0-Setup.exe",
+          "format": "EXE",
+          "architecture": "x64",
+          "size": "154 MB",
+          "compatibility": "Für Windows-PCs mit Intel- oder AMD-Prozessor (64 Bit).",
+          "installation": [
+            "Setup.exe herunterladen und öffnen.",
+            "Die Installation abschließen und den Kautionsrechner starten."
+          ]
+        },
+        "mac": {
+          "label": "macOS",
+          "url": "https://github.com/moritzdotcom/athome-website/releases/download/kautionsrechner-v1.0.0/Kautionsrechner-1.0.0-universal.dmg",
+          "fileName": "Kautionsrechner-1.0.0-universal.dmg",
+          "format": "DMG",
+          "architecture": "universal",
+          "size": "220 MB",
+          "compatibility": "Eine Version für Macs mit Apple Silicon und Intel-Prozessor.",
+          "installation": [
+            "DMG-Datei herunterladen und öffnen.",
+            "Den Kautionsrechner in den Programme-Ordner ziehen.",
+            "Die App aus dem Programme-Ordner starten."
+          ]
+        }
+      },
+      "descriptionTitle": "Ein klarer Ablauf. Eine fertige Abrechnung."
+    }
+  ]
+}
