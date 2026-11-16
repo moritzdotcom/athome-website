@@ -7,7 +7,7 @@
       "slug": "kautionsrechner",
       "name": "Kautionsrechner",
       "category": "Abrechnung",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "releaseDate": null,
       "icon": "/appstore/kautionsrechner/icon.png",
       "shortDescription": "Kaution verzinsen. Abrechnung erstellen. Fertig.",
@@ -50,16 +50,16 @@
         }
       ],
       "releaseNotes": [
-        "Erste Version für unser Team: Berechnung, Kautionseinbehalt, PDF, Druck und lokale Historie."
+        "Kautions-Einbehalt wird jetzt im PDF angezeigt"
       ],
       "downloads": {
         "windows": {
           "label": "Windows",
-          "url": "https://github.com/moritzdotcom/athome-website/releases/download/kautionsrechner-v1.0.0/Kautionsrechner-1.0.0-Setup.exe",
-          "fileName": "Kautionsrechner-1.0.0-Setup.exe",
+          "url": "https://github.com/moritzdotcom/athome-website/releases/download/kautionsrechner-v1.0.1/Kautionsrechner-1.0.1-Setup.exe",
+          "fileName": "Kautionsrechner-1.0.1-Setup.exe",
           "format": "EXE",
           "architecture": "x64",
-          "size": "154 MB",
+          "size": "147 MB",
           "compatibility": "Für Windows-PCs mit Intel- oder AMD-Prozessor (64 Bit).",
           "installation": [
             "Setup.exe herunterladen und öffnen.",
@@ -68,8 +68,8 @@
         },
         "mac": {
           "label": "macOS",
-          "url": "https://github.com/moritzdotcom/athome-website/releases/download/kautionsrechner-v1.0.0/Kautionsrechner-1.0.0-universal.dmg",
-          "fileName": "Kautionsrechner-1.0.0-universal.dmg",
+          "url": "https://github.com/moritzdotcom/athome-website/releases/download/kautionsrechner-v1.0.1/Kautionsrechner-1.0.1-universal.dmg",
+          "fileName": "Kautionsrechner-1.0.1-universal.dmg",
           "format": "DMG",
           "architecture": "universal",
           "size": "220 MB",
